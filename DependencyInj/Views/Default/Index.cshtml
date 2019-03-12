@@ -1,0 +1,27 @@
+﻿@model DependencyInj.ViewModels.StudentViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div>
+    @using (Html.BeginForm("Create", "Default", FormMethod.Post))
+    {
+        <fieldset>
+            <legend>New student row</legend>
+            <div>@Html.DisplayNameFor(x => x.sno)</div>
+            <div>@Html.EditorFor(x => x.sno)</div>
+            <div style="color:red">@Html.ValidationMessageFor(x => x.sno)</div>
+            <div>@Html.DisplayNameFor(x => x.sname)</div>
+            <div>@Html.EditorFor(x => x.sname)</div>
+            <div style="color:red">@Html.ValidationMessageFor(x => x.sname)</div>
+            <div>@Html.DisplayNameFor(x => x.saddress)</div>
+            <div>@Html.EditorFor(x => x.saddress)</div>
+            <div style="color:red">@Html.ValidationMessageFor(x => x.saddress)</div>
+            <div></div>
+            <div><input type="submit" value="Click" /></div>
+        </fieldset>
+
+    }
+</div>
+
